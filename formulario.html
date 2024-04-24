@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <script>
+        function senai() {
+            $nome = this.form1.fNome.value;
+            $idade = this.form1.fIdade.value;
+            $sexo = this.form1.fSexo.value;
+            $curso = this.form1.fCurso.value;
+            $turno = this.form1.fTurno.value;
+            $professor1 = this.form1.fProfessor1.value;
+            $professor2 = this.form1.fProfessor2.value;
+            $disc = ""
+
+            if (this.form1.html.checked) {
+                $disc = $disc + "HTML/"
+            }
+
+            if (this.form1.javascript.checked) {
+                $disc = $disc + "JavaScript/"
+            }
+
+            if (this.form1.arduino.checked) {
+                $disc = $disc + "Arduino/"
+            }
+            if (this.form1.logica.checked) {
+                $disc = $disc + "Lógica/"
+            }
+            if (this.form1.gestalt.checked) {
+                $disc = $disc + "Gestalt/"
+            }
+            
+
+            alert("Seu formulário foi enviado")
+            document.write("Nome: ", $nome, "<br>")
+            document.write("Idade: ", $idade, "<br>" )
+            document.write("Sexo: ", $sexo, "<br>")
+            document.write("Curso: ", $curso, "<br>" )
+            document.write("Turno: ", $turno, "<br>")
+            document.write("Professor 1: ", $professor1, "<br>" )
+            document.write("Professor 2: ", $professor2, "<br>")
+            document.write ("Disciplinas: " + $disc)
+            return false;
+        }
+
+    </script>
+
+</head>
+
+<body  bgcolor="#00FF00">
+
+    <table border="0" width="1270">
+
+        <tr>
+                <center>
+                    <font size="8">
+                    FORMULARIO
+                    </font>
+                </center>          
+            </td>
+        </tr>
+    </table>
+    <br>
+
+      <form name="form1" action="" method="post" onsubmit=" return senai()">
+
+      <table border="0" width="1270">
+
+
+
+        <tr>
+            <br><br><br><br>
+            <td width="250"></td>
+            
+            <td width="300">
+                
+                    Nome: <input type="text" name="fNome" size="30" maxlength="40"> 
+                   
+            </td>
+        </tr>
+ 
+        <tr>
+            <td width="250"></td>
+            <td>
+               
+                    Idade: <input type="text" name="fIdade" size="8" maxlength="3"> <br>
+                      
+            </td>
+            <td width="100"></td>                                                 
+            <td>
+                           
+                     Sexo:
+
+                    Masculino <input type="radio" name="fSexo" value="Masculino">
+                    Feminino <input type="radio" name="fSexo" value="Feminino">
+               
+
+            </td>
+        </tr>
+        <tr>
+            <td width="250"></td>
+            <td>
+               
+                    Curso:
+
+                    <select name="fCurso">
+                    <option value="emBranco">Escolha uma opção abaixo: </option>
+                    <option value="ds"> DS </option>
+                    <option value="mecanica"> Mecânica </option>
+                    <option value="solda"> Solda </option>
+            
+                        
+            </td>
+            <td width="100"></td>  
+            <td>
+               
+                Turno:
+
+                <select name="fTurno">
+                <option value="emBranco">Escolha uma opção abaixo: </option>
+                <option value="manha"> Manhã </option>
+                <option value="tarde"> Tarde </option>
+                <option value="noite"> Noite </option>
+        
+                    
+        </td>
+        <tr>
+            <td width="250"></td>
+            <td>
+               
+                Professor1:
+
+                <select name="fProfessor1">
+                <option value="emBranco">Escolha uma opção abaixo: </option>
+                <option value="Lucas Calu"> Lucas Calu </option>
+                <option value="Ricardo Correa"> Ricardo Corrêa </option>
+        
+                    
+        </td>
+        <td width="100"></td>  
+        <td>
+               
+            Professor2:
+
+            <select name="fProfessor2">
+            <option value="emBranco">Escolha uma opção abaixo: </option>
+            <option value="Lucas Calu"> Lucas Calu </option>
+            <option value="Ricardo Correa"> Ricardo Corrêa </option>
+    
+    
+        </td>
+        </tr>
+        
+        <tr>
+            <td width="250"></td>
+            <td>
+                Discplinas que mais gosta:
+                <br>
+                <input type="checkbox" name="html" >Html<br>
+                <input type="checkbox" name="javascript" >JavaScript<br>
+                <input type="checkbox" name="arduino" >Arduino<br>
+                <input type="checkbox" name="logica" >Lógica<br>
+                <input type="checkbox" name="gestalt" >Gestalt<br>
+
+                
+            </td>
+        </tr>
+        
+        
+        </table>
+        <table border="1">
+            <tr>
+                <br><br><br><br><br><br>
+                <center>
+                    <input type="submit" value="Gravar">
+                    <input type="reset" value="Limpar">
+                </center>    
+
+            </tr>
+            <table border="1">
+
+                <tr>
+                    <br>
+                    <a href="http://127.0.0.1:5500/ativ220424.html"> Voltar para a página de login</a>
+                </tr>
+
+        </table>
+ 
+
+
+
+      </form>
+
+      </table>
+
+</body>
+
+</html>

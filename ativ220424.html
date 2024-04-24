@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <script>
+
+        function senai() {  
+
+            $nome = this.Form1.fNome.value;
+
+            $senha = this.Form1.fSenha.value;
+            
+            if (($nome == "SENAI") && ($senha == "sumare")){
+                window.location.href="http://127.0.0.1:5500/formulario.html"
+                return false;
+            }
+            else {
+
+                window.location.href="http://127.0.0.1:5500/erro.html"
+                return false;
+
+            }
+        }
+
+    </script>
+</head>
+
+<body bgcolor="#00FF00">
+
+
+ 
+
+
+
+      
+    <form name="Form1" action="" method="post" onsubmit="return senai()">
+
+        <table border="0" width="1270">
+        <tr>
+            <font size="8">
+                <center>
+                    LOGIN E SENHA
+                </center>
+            </font>
+        </tr>
+        <br><br><br><br>
+        <tr>
+            <td>
+                <center>
+                    Nome: <input type="text" name="fNome" size="23">
+                </center>          
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center>
+                    Senha: <input type="password" name="fSenha" size="23">
+                </center>          
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <center>
+                    <input type="submit" value="GRAVAR">
+                </center>          
+            </td>
+        </tr>
+
+
+
+
+
+    </td>
+
+
+    </form>
+  </table> 
+
+</body>
+
+</html>
+    
